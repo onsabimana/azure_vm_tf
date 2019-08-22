@@ -1,0 +1,6 @@
+hosts: all
+tasks:
+- name: Install Jetty
+  apt: pkg=jetty state=installed update_cache=true
+- name: Start Jetty
+  service: name=jetty state=started
